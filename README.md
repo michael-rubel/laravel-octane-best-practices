@@ -50,6 +50,8 @@ $this->app->singleton(Service::class, function () {
 
 You can also avoid using singletons or use [scoped singletons](https://laravel.com/docs/11.x/container#binding-scoped) instead.
 
+Bonus: If you use Larastan (PHPStan for Laravel), then look at [OctaneCompatibilityRule](https://github.com/larastan/larastan/blob/e1b64a0f3120cf40fca9703a718e29b0cef89f9f/src/Rules/OctaneCompatibilityRule.php).
+
 ## 🗄️ Database connections are persistent by default
 When using Octane, database connections are persistent by default. This is OK for most apps and improves the performance of your database interactions by keeping the connection.
 But in some cases, you might want to ensure that database connections do not persist across requests due to the specifics of your application.
